@@ -196,8 +196,6 @@ def create_playlist():
                 # Format the channel name as 'FULL_NAME vCHANNEL.NUM' (e.g., 'WWAY 2 CBS v11.6')
                 channel_name = f"{channel[1]} v{channel[0]}"
                 f.write(f'#EXTINF:-1 tvg-id="{channel[0]}" tvg-name="{channel_name}",{channel_name}\n')
-                f.write(f'#EXTVLCOPT:http-referer={base_url}/\n')
-                f.write(f'#EXTVLCOPT:http-user-agent=Mozilla/5.0\n')
                 f.write(f'{base_url}/v{channel[0]}\n\n')
 
         print(f"TiviMate playlist generated: {output_file}")

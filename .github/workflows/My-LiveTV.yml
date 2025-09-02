@@ -3,7 +3,7 @@ name: Update LiveTV Playlist
 
 on:
   schedule:
-    - cron: '0 3 * * *'  # Run daily at 3 AM UTC
+    - cron: 'H 5 * * *'  # Run daily at 5 AM PDT
   workflow_dispatch:  # Allow manual triggering
   push:
     branches: [ main ]
